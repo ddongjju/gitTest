@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+   var circle = {
+      rad : 4,
+      getArea : function(){
+         // 반지름 * 반지름 * 3.14
+         // var area = this.rad * this.rad * Math.PI;
+         var area = Math.floor(Math.PI * Math.pow(this.rad, 2));
+         return area;
+      },
+      getCircum : function(){
+         // 반지름 * 2 * 3.14
+         cir = Math.floor( 2 * Math.PI * this.rad);
+         return cir;
+      }
+   }
+   function proc1(){
+      circle.name = "동그라미";
+      
+      res = "이름 : " + circle.name + "<br>";
+      res += "반지름 : " + circle.rad + "<br>";
+      res += "면적 : " + circle.getArea() +"<br>";
+      res += "둘레 : " + circle.getCircum() + "<br>";
+      
+      document.getElementById('result1').innerHTML = res;
+   }
+   var rect = {
+      width : 10,
+      height : 10,
+      getArea : function(){
+         // 가로 * 세로
+         var area = this.width * this.height;
+         
+         return area;
+      },
+      getCircum : function(){
+         // 가로 * 2 + 세로 * 2
+         cir = this.width * 2 + this.height * 2;
+         return cir;
+      }
+   }
+   function proc2(){
+      rect.name = "네모";
+      
+      res = "이름 : " + rect.name + "<br>";
+      res += "가로 : " + rect.width + "<br>";
+      res += "세로 : " + rect.height + "<br>";
+      res += "면적 : " + rect.getArea() +"<br>";
+      res += "둘레 : " + rect.getCircum() + "<br>";
+      
+      document.getElementById('result2').innerHTML = res;
+   }
+</script>
+</head>
+<body>
+<div class="box">
+   <h3>1. circle객체 생성</h3>
+   - 속성    : 반지름 rad<br>
+   - 메서드 : 면적 구하기(getArea()), 둘레 구하기(getCircum())<br>
+   <br>
+   <input type="button" value="확인" onclick="proc1()">
+   <br><br>
+   <div id="result1"></div>
+</div>
+
+<div class="box">
+   <h3>2. Rect객체 생성</h3>
+   - 속성    : 가로(width), 세로(height), 이름(name)<br>
+   - 메서드 : 면적 구하기(getArea()), 둘레 구하기(getCircum())<br>
+   <br>
+   <input type="button" value="확인" onclick="proc2()">
+   <br><br>
+   <div id="result2"></div>
+</div>
+</body>
+</html>

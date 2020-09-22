@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+header{
+	box-sizing: border-box;
+	margin: 1px;
+	padding: 5px;
+	border-radius: 40px;
+	background: #E4F7BA;
+	
+	}
+	nav{
+		background: #E8D9FF;
+		border-radius: 40px;
+	}
+	ul#u1 {
+      padding : 20px;
+      border-left : none;
+      border-right : none;
+      text-align: center;
+      color: white;
+   }
+   #u1 li {
+      display : inline;
+      margin : 20px;
+      padding : 10px;
+      letter-spacing : 10px;
+   }
+   h2{
+   	margin : 20px;
+      padding : 10px;
+      align : center;
+   
+   }
+   #d1{
+    border: 1px solid pink;
+    width: 200px;
+    height: 330px;
+    background-color: pink;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+   }
+/*    #d1 li { */
+/*       display : inline;  */
+/*       margin : 20px; */
+/*       padding : 10px; */
+
+/*    } */
+   #left{
+   		width: calc(21% - 1%);
+		height: 500px;
+		border-radius:50px 50px 0px 0px;
+		background: #FFEAEA;
+		float: left;
+		margin: 1px;
+   
+   }
+   section{
+   		width: calc(61% - 1%);
+		height: 500px;
+		border-radius: 50px 50px 0px 0px;
+		background: #F6F6F6;
+		float: left;
+		margin: 2px;
+   }
+   #right{
+   		width: calc(20% - 1%);
+		height: 500px;
+		border-radius: 50px 50px 0px 0px;
+		background: #FFEAEA;
+		float: right;
+		margin: 1px;
+   
+   }
+   
+   footer{
+   		border-radius: 40px;
+		background: #F5D6FF;
+		clear: both;
+		height: 50px;
+		width: calc(99%);
+		padding: 5px;
+   }
+   p{
+   	margin: 5px;
+   	padding: 5px;
+   }
+   a{
+   	margin: 5px;
+   	padding: 5px;
+   }
+   #d2{
+    border: #FFEAEA;
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+   }
+   img{
+   	width: 250px;
+    height: 300px;
+    float: left;
+   }
+   article{
+     width: 95%;
+     height: 90%;
+     margin: 20px;
+     padding: 30px;
+     float: left;
+   }
+   iframe{
+	   width: 95%;
+	   height: 90%;
+   }
+   
+   
+
+
+</style>
+</head>
+<body>
+
+<header>
+	<h1 align="center">
+	Web Shopping</h1>
+</header>
+<nav>
+<ul id="u1">
+      <li>HOME</li>
+      <li>SHOPPING ABOUT</li>
+      <li>NEWS</li>
+      <li>MY ACCOUNT</li>
+      <li>CONTACTS</li>
+   </ul>
+</nav>
+<aside id ="left">
+<h2>카테고리</h2>
+<div id = "d1">
+ 	<p><a href="커피.html" target="ifr">커피</a></p>
+ 	<hr>
+    <p><a href="의류.html" target="ifr">의류</a></p>
+ 	<hr>
+    <p><a href="음악.html" target="ifr">음악</a></p>
+ 	<hr>
+    <p><a href="영화.html" target="ifr">영화</a></p>
+ 	<hr>
+    <p><a href="스포츠.html" target="ifr">스포츠/레저</a></p>
+ 	<hr>
+    <p><a href="가구.html" target="ifr">가구/인테리어</a></p>
+ 	<hr>
+    <p><a href="식품.html" target="ifr">식품</a></p>
+</div>
+</aside>
+<section>
+	<article>
+	    <iframe src ="커피.html" name="ifr"> 
+        </iframe>
+	</article>
+</section>
+
+<aside id ="right">
+<h2>Shopping Cart</h2>
+<p>현재 쇼핑카트에 물품이 없습니다.</p><br>
+<a href="쇼핑카트.html" target="_blank">쇼핑카트 보기</a>
+<h2>Log In</h2>
+<div id = "d2">
+아이디<br>
+<input type="text" name="id"> <br>
+패스워드<br>
+<input type="text" name="pass"> <br>
+<button type = "button" onclick="alert('로그인하였습니다.')">로그인</button>
+<button type = "button" onclick="alert('초기화하였습니다.')">초기화</button><br>
+<br>
+<a href="회원가입.html" target="_blank">회원가입</a>
+<a href="" target="_blank">비밀번호 분실</a>
+</div>
+</aside>
+<footer>
+<p align="center">2020.07.23	대덕인재개발원</p>
+</footer>
+</body>
+</html>

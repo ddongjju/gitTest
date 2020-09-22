@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+pre{
+	background : #FFB4B4;
+	border : 5px dotted white;
+	font-size : 1.3em;
+}
+
+.box{
+	background-image : linear-gradient(to right, #DAD9FF 5%, #D4F4FA 30%, white);
+	hight : auto;
+	margin-top: 10px;
+	padding: 20px;
+}
+.box div{
+	border : 1px dotted orange;
+	padding: 10px;
+	height : auto;
+}
+.box input[type=button]{
+	background: lightgray;
+	color : white;
+	width : 100px;
+	padding: 10px 5px;
+	border-radius: 20px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		border : 2px solid hotpink;
+	}
+	td{
+		width : 150px;
+		height : 70px;
+	}
+	#tab2{
+		border-collapse: collapse;
+		border : 2px solid blue;
+		text-align:center;
+	}
+	#td1{
+		width : 500px;
+		text-align:left;
+	}
+	#tr1{
+		height : 10px;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+
+<table border="1">
+	<tr>
+		<td colspan="2">1열</td>
+		<td colspan="2">2열</td>
+		<td>3열</td>
+		<td>4열</td>
+	</tr>
+	
+	<tr>
+		<td colspan="4">1행 1열</td>
+		<td colspan="2">1행 2열</td>
+	</tr>
+	
+	<tr>
+		<td colspan="4">2행 1열</td>
+		<td colspan="2" rowspan="2">2행 1열</td>
+	</tr>
+	
+	<tr>
+		<td>3행 1열</td>
+		<td>3행 2열</td>
+		<td>3행3열</td>
+		<td>3행 4열</td>
+	</tr>
+	
+</table>
+
+<table id="tab2" border="1">
+	<tr>
+		<th colspan="5" height="50px">제목</th>
+	</tr>
+	<tr id = "tr1">
+		<td>1</td>
+		<td>2</td>
+		<td id = "td1">3</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+	
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td id = "td1">3</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td id = "td1">3</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td id = "td1">3</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+
+
+</table>
+</body>
+</html>

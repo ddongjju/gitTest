@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+
+
+window.onload = function(){
+	random = Math.floor(Math.random()*100+1)
+	count = 0;
+	hint="";
+	values ="";
+	
+	result = document.querySelector("#result1");
+}
+function proc1() {
+	inputvalue= document.querySelector("#input").value;
+	
+	values += inputvalue + " ";
+	
+	if(random == inputvalue){
+		hint ="정답";	
+		count++;
+		//출력
+		res = "랜덤 : " + random + "<br>";
+		res += "입력 값들: " + values +"<br>";
+		res += "횟수 : " + count + "<br>";
+		
+		result.innerHTML = res;
+		
+	}else if(random > inputvalue){
+		hint = "더크게";
+		count++;
+		result.innerHTML = hint;
+		
+	}else if(random < inputvalue){
+		hint="더작게";
+		count++;
+		result.innerHTML = hint;
+		
+	}
+	
+	document.querySelector("#result1").innerHTML = res;
+	
+}
+
+function proc2() {
+	arr = ["가위", "바위", "보"];
+	ran=Math.floor(Math.random()*2);
+	com =arr[ran];
+	
+	user = prompt("'가위, 바위, 보' 중에 입력하세요");
+	
+	res ="컴퓨터: "  + com + "<br>";
+	res +="사용자: "  + user + "<br>";
+	
+	if(com == user){
+		res += "비김";
+	}else if(com == "가위" && user == "바위" || com == "바위" && user == "보" || com == "보" && user =="가위"){
+		res += "사용자 이김!!";
+	}else{
+		res += "컴퓨터가 이김!!"
+	}
+	
+	//출력
+	
+	document.querySelector("#result2").innerHTML = res;
+}
+
+function proc3() {
+	
+	arr = [];
+	
+	for(;;){
+		
+		ran = (Math.floor(Math.random()*45+1));
+		
+		if(arr.indexOf(ran) < 0) arr.push(ran);
+		
+		if(arr.length > 5) break;
+	}
+	
+	document.getElementById('result3').innerHTML = arr;
+}
+
+</script>
+</head>
+<body>
+<div class="box">
+   <h3>1.랜덤수 맞추기</h3>
+	1~100 사이의 난수를 발생한다.<br>
+	난수를 맞춘다<br>
+	힌트와 횟수를 체크<br>
+   <br>
+   <input type="text" id="input">
+   <input type="button" value="확인" onclick="proc1()">
+   <br><br>
+   <div id="result1"></div>
+
+</div>
+
+<div class="box">
+   <h3>2.가위바위보</h3>
+	컴퓨터는 배열에 저장. 랜덤으로 가위바위보를 결정<br>
+	사용자는 가위바위보를 입력 -prompt<br>
+	어느쪽이 이겼는지 결과를 출력<br>
+   <br>
+   <input type="text" id="input">
+   <input type="button" value="확인" onclick="proc2()">
+   <br><br>
+   <div id="result2"></div>
+
+</div>
+
+<div class="box">
+   <h3>3.로또번호</h3>
+	1~45번 까지 랜덤을 6개 발생하여 배열에 저장<br>
+	중복이 없어야 한다.<br>
+   <br>
+   <input type="button" value="확인" onclick="proc3()">
+   <br><br>
+   <div id="result3"></div>
+
+</div>
+</body>
+</html>

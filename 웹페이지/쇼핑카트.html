@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+table{
+		border : 3px solid pink;
+		border-collapse: collapse;
+		margin: 20px;
+	}
+	th{
+		height : 50px;
+		
+	}
+	td{
+		width : 200px;
+		height : 40px;
+		text-align : center;
+	}
+	div{
+		margin: 30px;
+	}
+
+</style>
+</head>
+<body>
+<div>
+<h2>Shopping Cart</h2>
+</div>
+<table border="1">
+	<tr id = "tr1">
+		<th>품목</th>
+		<th>가격</th>
+		<th>수량</th>
+		<th>합계</th>
+	</tr>
+	
+	<tr>
+		<td>커피세트</td>
+		<td>20000원</td>
+		<td><input type="text" name="qty"></td>
+		<td><input type="text" name="sum"></td>
+	</tr>
+	
+	<tr>
+		<td>음악파일</td>
+		<td>5000원</td>
+		<td><input type="text" name="qty"></td>
+		<td><input type="text" name="sum"></td>
+	</tr>
+	
+	<tr>
+		<td>영화파일</td>
+		<td>15000원</td>
+		<td><input type="text" name="qty"></td>
+		<td><input type="text" name="sum"></td>
+	</tr>
+	<tr>
+		<td>가구</td>
+		<td>3000000원</td>
+		<td><input type="text" name="qty"></td>
+		<td><input type="text" name="sum"></td>
+	</tr>
+</table>
+<div>
+<input type="button" value="계산">
+<input type="button" value="구매">
+<input type="button" value="초기화">
+</div>
+</body>
+</html>
